@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .button-row {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="count">Count: 0</h1>
+  <div class="button-row">
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+  </div>
+  <button id="reset">Reset</button>
+
+  <script>
+    let count = 0;
+    let display = document.getElementById("count");
+    let incBtn = document.getElementById("inc");
+    let decBtn = document.getElementById("dec");
+    let resetBtn = document.getElementById("reset");
+
+    incBtn.addEventListener("click", function () {
+      count++;
+      display.textContent = "Count: " + count;
+    });
+
+    decBtn.addEventListener("click", function () {
+      count--;
+      display.textContent = "Count: " + count;
+    });
+
+    resetBtn.addEventListener("click", function () {
+      count = 0;
+      display.textContent = "Count: " + count;
+    });
+  </script>
+</body>
+</html>
